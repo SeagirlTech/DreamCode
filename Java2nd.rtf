@@ -1,7 +1,7 @@
 {\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang4105{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset178 Arial;}}
 {\colortbl ;\red0\green0\blue255;}
-{\*\generator Riched20 10.0.10240}\viewkind4\uc1 
-\pard\ltrpar\sa200\sl276\slmult1\f0\fs22\lang9\par
+{\*\generator Riched20 10.0.10586}\viewkind4\uc1 
+\pard\ltrpar\sa200\sl276\slmult1\f0\fs22\lang9 first change\par
 Basics: All about Java threads\par
 MULTITHREADING\par
 What are Java Threads?\par
@@ -3657,24 +3657,24 @@ Output:\par
 The text contains 'book'? true\par
 In this tutorial we will learn how to define patterns and how to use them. The java.util.regex API (the package which we need to import while dealing with Regex) has two main classes:\par
 \par
-1) java.util.regex.Pattern \f1\endash  Used for defining patterns\par
-2) java.util.regex.Matcher \endash  Used for performing match operations on text using patterns\par
+1) java.util.regex.Pattern \f1\endash  \f0 Used for defining patterns\par
+2) java.util.regex.Matcher \f1\endash  \f0 Used for performing match operations on text using patterns\par
 \par
 java.util.regex.Pattern class:\par
 \par
 1) Pattern.matches()\par
-We have already seen the usage of this method in the above example where we performed the search for string \ldblquote book\rdblquote  in a given text. This is one of simplest and easiest way of searching a String in a text using Regex.\par
+We have already seen the usage of this method in the above example where we performed the search for string \f1\ldblquote\f0 book\f1\rdblquote  \f0 in a given text. This is one of simplest and easiest way of searching a String in a text using Regex.\par
 \par
 String content = "This is a tutorial Website!";\par
 String patternString = ".*tutorial.*";\par
 boolean isMatch = Pattern.matches(patternString, content);\par
 System.out.println("The text contains 'tutorial'? " + isMatch);\par
-As you can see we have used matches() method of Pattern class to search the pattern in the given text. The pattern .*tutorial.* allows zero or more characters at the beginning and end of the String \ldblquote tutorial\rdblquote  (the expression .* is used for zero and more characters).\par
+As you can see we have used matches() method of Pattern class to search the pattern in the given text. The pattern .*tutorial.* allows zero or more characters at the beginning and end of the String \f1\ldblquote\f0 tutorial\f1\rdblquote  \f0 (the expression .* is used for zero and more characters).\par
 \par
 Limitations: This way we can search a single occurrence of a pattern in a text. For matching multiple occurrences you should use the Pattern.compile() method (discussed in the next section).\par
 \par
 2) Pattern.compile()\par
-In the above example we searched a string \ldblquote tutorial\rdblquote  in the text, that is a case sensitive search, however if you want to do a CASE INSENSITIVE search or want to do search multiple occurrences then you may need to first compile the pattern using Pattern.compile() before searching it in text. This is how this method can be used for this case.\par
+In the above example we searched a string \f1\ldblquote\f0 tutorial\f1\rdblquote  \f0 in the text, that is a case sensitive search, however if you want to do a CASE INSENSITIVE search or want to do search multiple occurrences then you may need to first compile the pattern using Pattern.compile() before searching it in text. This is how this method can be used for this case.\par
 \par
 String content = "This is a tutorial Website!";\par
 String patternString = ".*tuToRiAl.";\par
@@ -3767,11 +3767,11 @@ Found at: 17 - 19\par
 Now we are familiar with Pattern and Matcher class and the process of matching a regular expression against the text. Lets see what kind of various options we have to define a regular expression:\par
 \par
 1) String Literals\par
-Lets say you just want to search a particular string in the text for e.g. \ldblquote abc\rdblquote  then we can simply write the code like this: Here text and regex both are same.\par
+Lets say you just want to search a particular string in the text for e.g. \f1\ldblquote\f0 abc\f1\rdblquote  \f0 then we can simply write the code like this: Here text and regex both are same.\par
 Pattern.matches("abc", "abc")\par
 \par
 2) Character Classes\par
-A character class matches a single character in the input text against multiple allowed characters in the character class. For example [Cc]haitanya would match all the occurrences of String \ldblquote chaitanya\rdblquote  with either lower case or upper case C\rdblquote . Few more examples:\par
+A character class matches a single character in the input text against multiple allowed characters in the character class. For example [Cc]haitanya would match all the occurrences of String \f1\ldblquote\f0 chaitanya\f1\rdblquote  \f0 with either lower case or upper case C\f1\rdblquote\f0 . Few more examples:\par
 Pattern.matches("[pqr]", "abcd"); It would give false as no p,q or r in the text\par
 Pattern.matches("[pqr]", "r"); Return true as r is found\par
 Pattern.matches("[pqr]", "pq"); Return false as any one of them can be in text not both.\par
@@ -3785,7 +3785,7 @@ Here is the complete list of various character classes constructs:\par
 [a-z&&[^bc]]: a through z, except for b and c: [ad-z] (subtraction)\par
 [a-z&&[^m-p]]:  a through z, and not m through p: [a-lq-z] (subtraction)\par
 \par
-Predefined Character Classes \endash  Metacharacters\par
+Predefined Character Classes \f1\endash  \f0 Metacharacters\par
 These are like short codes which you can use while writing regex.\par
 \par
 Construct\tab Description\par
@@ -3798,7 +3798,7 @@ Construct\tab Description\par
 \\W  ->\tab A non-word character: [^\\w]\par
 For e.g.\par
 Pattern.matches("\\\\d", "1"); would return true\par
-Pattern.matches("\\\\D", "z"); return true\par
+Pattern.matches("{{\field{\*\fldinst{HYPERLINK "\\\\\\\\D"}}{\fldrslt{\\\\D\ul0\cf0}}}}\f0\fs22 ", "z"); return true\par
 Pattern.matches(".p", "qp"); return true, dot(.) represent any character\par
 \par
 Boundary Matchers\par
@@ -3886,7 +3886,7 @@ public static void main(String args[])\{  \par
    System.out.println(\par
      Pattern.matches("^This$", "Is This Chaitanya")); //False\par
 \}\par
-\}\f0\par
+\}\par
 \par
 \par
 \par
@@ -3963,7 +3963,7 @@ Example:\par
 public void anyMethodHere()\{\par
     // Do something\par
 \}\par
-Now, whenever any program would use this method, the compiler would generate a warning. To read more about this annotation, refer this article: Java \f1\endash  @Deprecated annotation.\par
+Now, whenever any program would use this method, the compiler would generate a warning. To read more about this annotation, refer this article: Java \f1\endash  \f0 @Deprecated annotation.\par
 \par
 3) @SuppressWarnings\par
 This annotation instructs compiler to ignore specific warnings. For example in the below code, I am calling a deprecated method (lets assume that the method deprecatedMethod() is marked with @Deprecated annotation) so the compiler should generate a warning, however I am using @@SuppressWarnings annotation that would suppress that deprecation warning.\par
@@ -3994,7 +3994,7 @@ public @interface MyCustomAnnotation\{\par
     String stuAddress();\par
     String stuStream() default "CSE";\par
 \}\par
-Note: All the elements that have default values set while creating annotations can be skipped while using annotation. For example if I\rquote m applying the above annotation to a class then I would do it like this:\par
+Note: All the elements that have default values set while creating annotations can be skipped while using annotation. For example if I\f1\rquote\f0 m applying the above annotation to a class then I would do it like this:\par
 \par
 @MyCustomAnnotation(\par
     studentName="Chaitanya",\par
@@ -4098,7 +4098,7 @@ RetentionPolicy.RUNTIME: The annotation should be available at runtime, for insp
 RetentionPolicy.CLASS: The annotation would be in the .class file but it would not be available at runtime.\par
 RetentionPolicy.SOURCE: The annotation would be available in the source code of the program, it would neither be in the .class file nor be available at the runtime.\par
 \par
-That\rquote s all for this topic \ldblquote Java Annotation\rdblquote . Should you have any questions, feel free to drop a line below.\f0\par
+That\f1\rquote\f0 s all for this topic \f1\ldblquote\f0 Java Annotation\f1\rdblquote\f0 . Should you have any questions, feel free to drop a line below.\par
 \par
 @Deprecated annotation in java\par
  JAVA TUTORIALS\par
@@ -4186,9 +4186,9 @@ Java Autoboxing and Unboxing with examples\par
  JAVA TUTORIALS\par
 Java 1.5 introduced a special feature of auto conversion of primitive types to the corresponding Wrapper class and vice versa.\par
 \par
-Autoboxing: Automatic conversion of primitive types to the object of their corresponding wrapper classes is known as autoboxing. For example \f1\endash  conversion of int to Integer, long to Long, double to Double etc.\par
+Autoboxing: Automatic conversion of primitive types to the object of their corresponding wrapper classes is known as autoboxing. For example \f1\endash  \f0 conversion of int to Integer, long to Long, double to Double etc.\par
 \par
-Unboxing: It is just the reverse process of autoboxing. Automatically converting an object of a wrapper class to its corresponding primitive type is known as unboxing. For example \endash  conversion of Integer to int, Long to long, Double to double etc.\par
+Unboxing: It is just the reverse process of autoboxing. Automatically converting an object of a wrapper class to its corresponding primitive type is known as unboxing. For example \f1\endash  \f0 conversion of Integer to int, Long to long, Double to double etc.\par
 \par
 Primitive type\tab Wrapper class\par
 boolean\tab         Boolean\par
@@ -4284,10 +4284,10 @@ int inum = num2.intValue();\par
 Similar things happen with the other wrapper classes and primitive types such as long, double, short etc.\par
 \par
 Few things you should take care:\par
-Do not mix primitives and objects while doing comparisons. You might get unpredictable results for such comparisons. Better thing to do is: compare object with objects (using equals() method) and compare primitive with primitives(using logical operators such as \ldblquote ==\rdblquote , \ldblquote <\rdblquote  etc).\par
+Do not mix primitives and objects while doing comparisons. You might get unpredictable results for such comparisons. Better thing to do is: compare object with objects (using equals() method) and compare primitive with primitives(using logical operators such as \f1\ldblquote\f0 ==\f1\rdblquote\f0 , \f1\ldblquote\f0 <\f1\rdblquote  \f0 etc).\par
 \par
 \par
-Java Tutorial \endash  Compilation and Execution of First Java Program\par
+Java Tutorial \f1\endash  \f0 Compilation and Execution of First Java Program\par
  JAVA TUTORIALS\par
 To create a java code an editor such as notepad, text pad or an IDE like eclipse can be used.\par
 \par
@@ -4301,9 +4301,9 @@ public class FirstJavaProgram \{\par
 Output: This is my first program in java\par
 \par
 In the above program the class FirstJavaProgram has public access and hence declared public.\par
-\lquote class\rquote  is the keyword used to create a class.\par
-For running stand-alone programs \lquote main\rquote  method is needed which has a signature similar to the one defined in the above program.\par
-\lquote Main\rquote  method takes an array of strings as an argument. The name of the array can be anything.\par
+\f1\lquote\f0 class\f1\rquote  \f0 is the keyword used to create a class.\par
+For running stand-alone programs \f1\lquote\f0 main\f1\rquote  \f0 method is needed which has a signature similar to the one defined in the above program.\par
+\f1\lquote\f0 Main\f1\rquote  \f0 method takes an array of strings as an argument. The name of the array can be anything.\par
 To display the output, pass the string as an argument to the method System.out.println.\par
 Steps for compilation and Execution\par
 \par
@@ -4312,14 +4312,14 @@ Step2: Open command prompt and navigate to the directory where you have stored t
 Step 3: To compile, type javac FirstJavaProgram.java and press Enter.\par
 Step 4: On successful compilation, you will see the command prompt and FirstJavaProgram.class file in the same folder where WelcomeApp.java is stored. This is the byte code of the program.\par
 Step 5: To execute, type java FirstJavaProgram. Do not type the extension while executing.\par
-Step 6: See the output \ldblquote This is my first program in java\rdblquote  displayed on the console.\par
+Step 6: See the output \f1\ldblquote\f0 This is my first program in java\f1\rdblquote  \f0 displayed on the console.\par
 \par
 Common programming Errors in Java\par
 \par
 The following are the general programming errors and the solution for them while running on windows machine.\par
 \par
-1) \lquote javac\rquote  is not recognized as an internal or external command, operable program or batch file \endash  This means that the operating system cannot find the compiler \endash  javac.  In order to resolve this the PATH variable has to be set.\par
-2) Exception in thread \ldblquote main\rdblquote java.lang.NoClassDefFoundError: FirstJavaProgram \endash   This error means that java cannot find your compiled byte code, WelcomeApp.class. If the class file is present in directory other than the directory where java file is stored, then the CLASSPATH must be set pointing to the directory that contains compiled class files.\par
+1) \f1\lquote\f0 javac\f1\rquote  \f0 is not recognized as an internal or external command, operable program or batch file \f1\endash  \f0 This means that the operating system cannot find the compiler \f1\endash  \f0 javac.  In order to resolve this the PATH variable has to be set.\par
+2) Exception in thread \f1\ldblquote\f0 main\f1\rdblquote\f0 java.lang.NoClassDefFoundError: FirstJavaProgram \f1\endash   \f0 This error means that java cannot find your compiled byte code, WelcomeApp.class. If the class file is present in directory other than the directory where java file is stored, then the CLASSPATH must be set pointing to the directory that contains compiled class files.\par
 \par
 Another Example\par
 \par
@@ -4365,7 +4365,7 @@ The programming structure\par
 6) It gets easier to collect memory that does not has any future use\par
 \par
 \par
-Java Tutorial \endash  JVM (Java virtual Machine)\par
+Java Tutorial \f1\endash  \f0 JVM (Java virtual Machine)\par
  JAVA TUTORIALS\par
 JVM - java virtual machine\par
 1) Class loader accepts class files\par
@@ -4406,7 +4406,7 @@ Java Source code\par
 4) It does not return any value\par
 5) The controlling class of every Java application usually contain a main method\par
 6) This can be avoided to allow the class to be tested in a stand-alone mode.\par
-7) Other methods can subsequently be called in main()\f0\par
+7) Other methods can subsequently be called in main()\par
 \par
 \par
 How to override toString method for ArrayList in Java\par
@@ -4470,13 +4470,13 @@ Java ArrayList of Object Sort Example (Comparable And Comparator)\par
  JAVA COLLECTIONS\par
 In this tutorial we will see how to sort an ArrayList of Objects by property using comparable and comparator interface. If you are looking for sorting a simple ArrayList of String or Integer then you may like to refer the following tutorials \f1\endash\par
 \par
-Sorting of ArrayList<String> and ArrayList<Integer>\par
+\f0 Sorting of ArrayList<String> and ArrayList<Integer>\par
 Sorting of ArrayList in descending order\par
-We generally use Collections.sort() method to sort a simple array list. However if the ArrayList is of custom object type then in such case you have two options for sorting- comparable and comparator interfaces. Before going through the example of them, let\rquote s see what\rquote s the output when we try to sort arraylist of Objects without implementing any of these interfaces.\par
+We generally use Collections.sort() method to sort a simple array list. However if the ArrayList is of custom object type then in such case you have two options for sorting- comparable and comparator interfaces. Before going through the example of them, let\f1\rquote\f0 s see what\f1\rquote\f0 s the output when we try to sort arraylist of Objects without implementing any of these interfaces.\par
 \par
-What\rquote s the need of comparable and comparator?\par
+What\f1\rquote\f0 s the need of comparable and comparator?\par
 \par
-Consider the below example \endash  I have a Student class which has properties like Student name, roll no and student age.\par
+Consider the below example \f1\endash  \f0 I have a Student class which has properties like Student name, roll no and student age.\par
 \par
 public class Student  \{\par
     private String studentname;\par
@@ -4508,7 +4508,7 @@ public class Student  \{\par
  \tab this.studentage = studentage;\par
     \}\tab\par
 \}\par
-And I want to have an ArrayList of Student Object. We do it like this \endash\par
+And I want to have an ArrayList of Student Object. We do it like this \f1\endash\f0\par
 \par
 import java.util.*;\par
 public class ArrayListSorting  \{\par
@@ -4526,17 +4526,17 @@ public class ArrayListSorting  \{\par
 \tab    \}\par
      \}\par
 \}\par
-I tried to call the Collections.sort() on the List of Objects and boom! I got the the error message like this \endash\par
-Exception in thread \ldblquote main\rdblquote  java.lang.Error: Unresolved compilation problem:\par
+I tried to call the Collections.sort() on the List of Objects and boom! I got the the error message like this \f1\endash\f0\par
+Exception in thread \f1\ldblquote\f0 main\f1\rdblquote  \f0 java.lang.Error: Unresolved compilation problem:\par
 Bound mismatch: The generic method sort(List) of type Collections is not applicable for the arguments (ArrayList). The inferred type Student is not a valid substitute for the bounded parameter > at beginnersbook.com.Details.main(Details.java:11)\par
 \par
-Reason: I Just called the sort method on an ArrayList of Objects which actually doesn\rquote t work until unless we use interfaces like Comparable and Comparator.\par
+Reason: I Just called the sort method on an ArrayList of Objects which actually doesn\f1\rquote\f0 t work until unless we use interfaces like Comparable and Comparator.\par
 \par
-Now you must have understood the importance of these interfaces. Let\rquote s see how to use them to get the sorting done in our way.\par
+Now you must have understood the importance of these interfaces. Let\f1\rquote\f0 s see how to use them to get the sorting done in our way.\par
 \par
 Sorting of ArrayList<Object> with Comparable\par
 \par
-Let\rquote s say we need to sort the ArrayList<Student> based on the student Age property. This is how it can be done \endash  First implement Comparable interface and then Override the compareTo method.\par
+Let\f1\rquote\f0 s say we need to sort the ArrayList<Student> based on the student Age property. This is how it can be done \f1\endash  \f0 First implement Comparable interface and then Override the compareTo method.\par
 \par
 package beginnersbook.com;\par
 \par
@@ -4718,7 +4718,7 @@ public class TrimExample \{\par
 \}\par
 Output:\par
 \par
-[1, 2, 3, 4, 5, 6, 7, 1, 1, 1]\f0\par
+[1, 2, 3, 4, 5, 6, 7, 1, 1, 1]\par
 \par
 Java ArrayList set() Method example\par
  JAVA COLLECTIONS\par
